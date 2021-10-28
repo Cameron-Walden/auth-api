@@ -18,3 +18,4 @@ module.exports = {
   clothes: new Collection(clothes),
   users: userModel(sequelize, DataTypes),
 };  
+
