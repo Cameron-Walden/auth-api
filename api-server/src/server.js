@@ -2,6 +2,7 @@
 
 const express = require('express');
 const cors = require('cors');
+const app = express();
 
 // const morgan = require('morgan');
 
@@ -11,14 +12,13 @@ const logger = require('./middleware/logger.js');
 
 const v1Routes = require('./routes/v1.js');
 const authRoutes = require('./routes/authRoutes.js');
-const app = express();
+
 
 app.use(cors());
 // app.use(morgan('dev'));
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-
 app.use(logger);
 
 app.use('/api/v1', v1Routes);
@@ -26,9 +26,6 @@ app.use(authRoutes);
 
 app.use('*', notFoundHandler);
 app.use(errorHandler);
-//from auth
-// app.use(notFound);
-// app.use(errorHandler);
 
 module.exports = {
   server: app,

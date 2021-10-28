@@ -17,4 +17,4 @@ module.exports = {
   food: new Collection(food),
   clothes: new Collection(clothes),
   users: userModel(sequelize, DataTypes),
-};
+};  

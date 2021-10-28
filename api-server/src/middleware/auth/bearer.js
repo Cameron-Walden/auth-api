@@ -1,6 +1,6 @@
 'use strict';
 
-const { users } = require('../models')
+const { users } = require('../../models/index.js')
 
 module.exports = async (req, res, next) => {
 
@@ -16,6 +16,7 @@ module.exports = async (req, res, next) => {
 
   } catch (e) {
     _authError();
+  
   }
 
   function _authError() {
