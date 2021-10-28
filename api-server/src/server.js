@@ -10,7 +10,7 @@ const errorHandler = require('./error-handlers/500.js');
 const logger = require('./middleware/logger.js');
 
 const v1Routes = require('./routes/v1.js');
-const authRoutes = require('./auth/routes.js');
+const authRoutes = require('./routes/authRoutes.js');
 const app = express();
 
 app.use(cors());
